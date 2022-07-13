@@ -1,0 +1,106 @@
+:root{
+    --output-text: rgb(89, 238, 89);
+    --code-text: white;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+input#num1, input#num2{
+    width: 100px;
+    text-align: center;
+}
+
+#generate-btn{
+    width: 100px;
+}
+
+textarea{
+    font-size: 12px;
+    font-family: monospace;
+    background-color: black;
+    color: var(--code-text);
+    caret-color: var(--code-text);
+    height: 150px;
+    width: 100%;
+    max-width: 800px !important;
+}
+
+#run-btn{
+    width: 75px;
+}
+
+#output-div{
+    font-family: monospace;
+    padding: 1rem;
+    background-color: black;
+    color: var(--code-text);
+    height: fit-content;
+    width: 100%;
+    max-width: 800px !important;
+    font-size: 12px;
+}
+
+#output-text{
+    font-size: 12px;
+    color: var(--output-text)
+}
+
+#loader-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
+
+#loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+/* Increase textarea height and Font Size for bigger screens */
+
+@media screen and (min-width: 600px) {
+	textarea, #output-div, #output-text{
+	   font-size: 14px;
+    }
+
+    textarea{
+        height: 220px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+	textarea, #output-div, #output-text{
+	   font-size: 16px;
+    }
+
+    textarea{
+        height: 300px;
+    }
+}
+
