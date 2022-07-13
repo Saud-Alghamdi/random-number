@@ -6,7 +6,7 @@ const clientSecret = 'f0380aa5d3c1124b26b51eaddd46ff837dcb8f7b418ba06aac1b0c6bfa
 const port = process.env.PORT || 3000;
 
 
-app.listen(3000);
+app.listen(port);
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
