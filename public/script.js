@@ -1,4 +1,3 @@
-const body = document.querySelector('body');
 const selectLanguage = document.querySelector('select');
 const firstNum = document.querySelector('#num1');
 const secondNum = document.querySelector('#num2');
@@ -17,7 +16,7 @@ generateBtn.addEventListener('click', e => {
 
 });
 
-body.onload = () => {
+window.onload = () => {
     selectLanguage.value = localStorage.getItem("language")
     firstNum.value = localStorage.getItem("firstNum")
     secondNum.value = localStorage.getItem("secondNum")
