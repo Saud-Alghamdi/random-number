@@ -58,7 +58,7 @@ app.post('/generate', async(req, res) => {
 
         case 'nodejs':
             if(smallerNumber === 0) {
-                program.script = `            
+                program.script = `
 const randomNumber = Math.floor(Math.random() * ${greaterNumber + 1});
 
 console.log(randomNumber)`          
