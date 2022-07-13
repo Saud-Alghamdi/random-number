@@ -269,15 +269,6 @@ void main(){
             }
 
         break;
-        
-/////////////////////////////
-
-        case 'swift':
-            program.script = `
-let randomNumber = Int.random(in: ${smallerNumber}...${greaterNumber});
-print(randomNumber);`
-
-        break;
 
 /////////////////////////////
 
