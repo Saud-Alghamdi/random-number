@@ -20,8 +20,8 @@
     <div class="container d-grid gap-3 mt-2 text-center">
 
         <div class="row" id="row1">
-            <h1 class="col col-12">Random Number Generator</h1>
-            <p class="mt-3">Fastest random number generator, in the most famous programming languages &#128525;</p>
+            <h1 id="header" class="col col-12">Random Number Code Generator</h1>
+            <p id="subheader" class="mt-3">Fastest random number code generator, in most famous programming languages &#128525;</p>
         </div>
 
         <!-- ----------------------------------------------------------------------- -->
@@ -61,14 +61,14 @@
         <!-- ----------------------------------------------------------------------- -->
 
         <div class="row" id="row3">
-            <textarea id="script" name="script" spellcheck="false" class="col col-12 mx-auto border border-success border-3 mt-lg-3"><%= program.script %></textarea>
+            <textarea id="script" name="script" spellcheck="false" class="col col-12 mx-auto mt-lg-3"><%= program.script %></textarea>
         </div>
         
             <div class="row d-flex align-items-center" id="row3">
             <div class="col col-12">
                 <button id="run-btn" class="btn btn-primary mt-3">RUN</button>
             </div>
-            <div id="output-div" class="mt-4 col col-10 mx-auto text-start border border-success border-3">
+            <div id="output-div" class="mt-4 col col-10 mx-auto text-start">
                 <h6 id="output-text">output:</h6>
                 <p class="mt-2"><%= output %></p>
             </div>
@@ -79,5 +79,6 @@
     <!-- -------------------------------------------------------------------------------- -->
 
 </body>
+<script src="https://kit.fontawesome.com/b28c76ff90.js" crossorigin="anonymous"></script>
 <script src="script.js"></script>
 </html>

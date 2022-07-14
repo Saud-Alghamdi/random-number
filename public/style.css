@@ -1,9 +1,14 @@
 :root{
     --output-text: rgb(89, 238, 89);
     --code-text: white;
+    --black: #121212;
+    --heavy-terquaz: #018786;
+    --purple: #6200EE;
 }
 
 body{
+    background-color: var(--black);
+    color:white;
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -19,10 +24,17 @@ body * {
 input#num1, input#num2{
     width: 100px;
     text-align: center;
+    font-weight: bold;
+}
+
+select, option{
+    font-weight: bold;
+    text-align: center;
 }
 
 #generate-btn{
     width: 100px;
+    background-color: var(--heavy-terquaz);
 }
 
 textarea{
@@ -32,12 +44,15 @@ textarea{
     color: var(--code-text);
     caret-color: var(--code-text);
     height: 150px;
-    width: 100%;
+    width: 95% !important;
     max-width: 800px !important;
+    border: solid thin var(--heavy-terquaz);
 }
 
 #run-btn{
     width: 75px;
+    background-color: var(--purple);
+    border: none;
 }
 
 #output-div{
@@ -46,9 +61,10 @@ textarea{
     background-color: black;
     color: var(--code-text);
     height: fit-content;
-    width: 100%;
+    width: 95%;
     max-width: 800px !important;
     font-size: 12px;
+    border: solid thin var(--purple);
 }
 
 #output-text{
@@ -82,9 +98,13 @@ textarea{
 
 
 
-/* Increase textarea height and Font Size for bigger screens */
+/* Media Queries */
 
 @media screen and (min-width: 600px) {
+
+    #header{font-size: 14px;}
+    #subheader{font-size: 5px;}
+
 	textarea, #output-div, #output-text{
 	   font-size: 14px;
     }
@@ -103,4 +123,3 @@ textarea{
         height: 300px;
     }
 }
-

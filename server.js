@@ -64,13 +64,13 @@ const randomNumber = Math.floor(Math.random() * ${greaterNumber + 1});
 console.log(randomNumber)`          
 
             } else if(smallerNumber === 1)  {
-                program.script = `                
+                program.script = `
 const randomNumber = Math.floor(Math.random() * ${greaterNumber};   
 
 console.log(randomNumber)` 
 
             } else {
-                program.script = `                
+                program.script = `
 const randomNumber = Math.floor(Math.random() * (${greaterNumber} - ${smallerNumber} + 1) + ${smallerNumber});
     
 console.log(randomNumber)`

@@ -42,7 +42,7 @@ runBtn.addEventListener('click', e => {
         body: JSON.stringify(data)
     })
     .then(res => {
-        window.location.href = "https://random-number-gener.herokuapp.com"  // Refreshes the page, because post requests from JavaScript don't refresh the page.
+        window.location.href = "https://random-number.live"  // Refreshes the page, because post requests from JavaScript don't refresh the page.
         console.log(res)
     })
     .catch(err => console.log(err))
