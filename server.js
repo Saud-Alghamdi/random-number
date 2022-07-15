@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
 const request = require('request');
-const clientId = 'a9f94864f8a374d0b2a781739f5ea36'
-const clientSecret = 'f0380aa5d3c1124b26b51eaddd46ff837dcb8f7b418ba06aac1b0c6bfaa90eb9'
+require('dotenv').config();   // This enables you to use the variables in the .env file, by writing 'process.env.VariableName'.
+const clientId = process.env.CLIENT_ID;
+const clientSecret = process.env.CLIENT_SECRET;
 const port = process.env.PORT || 3000;
 
 
@@ -13,7 +14,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json())
 
 
-// Global variables
+// Global variables (to be updated during running the program)
 let output = ""
 let program = {
     script: "",
@@ -65,7 +66,7 @@ console.log(randomNumber)`
 
             } else if(smallerNumber === 1)  {
                 program.script = `
-const randomNumber = Math.floor(Math.random() * ${greaterNumber};   
+const randomNumber = Math.floor(Math.random() * ${greaterNumber} + 1);   
 
 console.log(randomNumber)` 
 
@@ -105,7 +106,7 @@ System.out.println(randomNumber);
 public class MyClass {
 public static void main(String args[]) {
                         
-int randomNumber = (int) Math.floor(Math.random() * ${greaterNumber});
+int randomNumber = (int) Math.floor(Math.random() * ${greaterNumber} + 1);
     
 System.out.println(randomNumber);
                 
@@ -130,8 +131,8 @@ System.out.println(randomNumber);
         case 'php':
             program.script = `
 <?php 
-$randomNumber = rand(${smallerNumber}, ${greaterNumber});
-echo $randomNumber
+  $randomNumber = rand(${smallerNumber}, ${greaterNumber});
+  echo $randomNumber
 ?>`
         break;
         
@@ -282,7 +283,7 @@ print(randomNumber);`
     }
     
 
-    // Send request to API
+    // Send request to jdoodle API
     request({
         url: 'https://api.jdoodle.com/v1/execute',
         method: "POST",
@@ -297,6 +298,8 @@ print(randomNumber);`
     });
 
 })
+
+
 
 // Run script
 app.post('/run', (req, res) => {
@@ -334,30 +337,3 @@ app.post('/run', (req, res) => {
     });
 
 });
-
-
-
-
-
-
-
-
-
-
-// async function doPostRequest() {
-
-//     const program = {
-//         script : "",
-//         language: "php",
-//         versionIndex: "0",
-//         clientId: "YourClientID",
-//         clientSecret:"YourClientSecret"
-//     };
-
-//     let res = await axios.post('https://api.jdoodle.com/v1/execute', program);
-
-//     let data = res.data;
-//     console.log(data);
-// }
-
-// doPostRequest();
