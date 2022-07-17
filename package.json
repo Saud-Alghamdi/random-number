@@ -14,8 +14,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "env-linux": "export $(cat .env | xargs) && env"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC"
