@@ -4,7 +4,7 @@ const request = require('request');
 require('dotenv').config();   // This enables you to use the variables in the .env file, by writing 'process.env.VariableName'.
 const clientId = process.env.CLIENT_ID;
 const clientSecret = process.env.CLIENT_SECRET;
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 
 app.listen(port);
