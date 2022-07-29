@@ -1,4 +1,4 @@
-// Picking DOM Elements
+// Selecting DOM Elements
 const selectLanguage = document.querySelector('select');
 const firstNum = document.querySelector('#num1');
 const secondNum = document.querySelector('#num2');
@@ -10,9 +10,9 @@ const loaderContainer = document.querySelector('#loader-container')
 // When click on Generate button
 generateBtn.addEventListener('click', e => {
 
-    localStorage.setItem("language", selectLanguage.value);     // Save your option's state using localStorage
-    localStorage.setItem("firstNum", num1.value);
-    localStorage.setItem("secondNum", num2.value);
+    sessionStorage.setItem("language", selectLanguage.value);     // Save your option's state using sessionStorage
+    sessionStorage.setItem("firstNum", firstNum.value);
+    sessionStorage.setItem("secondNum", secondNum.value);
 
     loaderContainer.classList.remove("visually-hidden");    // Remove class name
 
@@ -21,9 +21,9 @@ generateBtn.addEventListener('click', e => {
 
 // When page loads
 window.onload = () => {
-    selectLanguage.value = localStorage.getItem("language")
-    firstNum.value = localStorage.getItem("firstNum")
-    secondNum.value = localStorage.getItem("secondNum")
+    selectLanguage.value = sessionStorage.getItem("language");
+    firstNum.value = sessionStorage.getItem("firstNum");
+    secondNum.value = sessionStorage.getItem("secondNum");
 }
 
 
@@ -36,9 +36,9 @@ runBtn.addEventListener('click', e => {
     let language = selectLanguage.value;
     let data = {script, language}
 
-    localStorage.setItem("language", selectLanguage.value);     // Save your option's state using localStorage
-    localStorage.setItem("firstNum", num1.value);
-    localStorage.setItem("secondNum", num2.value);
+    sessionStorage.setItem("language", selectLanguage.value);     // Save your option's state using sessionStorage
+    sessionStorage.setItem("firstNum", num1.value);
+    sessionStorage.setItem("secondNum", num2.value);
 
     fetch('run', {
         method: 'POST',
@@ -48,7 +48,7 @@ runBtn.addEventListener('click', e => {
         body: JSON.stringify(data)
     })
     .then(res => {
-        window.location.href = "http://random-number.live"  // Refreshes the page, because I noticed post requests from JavaScript won't refresh the page.
+        window.location.href = "http://localhost:3000/"  // Refreshes the page, because I noticed post requests from JavaScript won't refresh the page.
         console.log(res)
     })
     .catch(err => console.log(err))
