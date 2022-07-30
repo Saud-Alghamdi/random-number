@@ -64,13 +64,13 @@ input#num1, input#num2{
     background-color: var(--hover-terquaz);
 }
 
-#script{
+#script-container{
     font-size: 10px;
     font-family: monospace;
     background-color: black;
     color: var(--code-text);
     caret-color: var(--code-text);
-    height: 200px;
+    height: 250px;
     width: 95% !important;
     max-width: 800px !important;
     outline: solid thin var(--heavy-terquaz);
@@ -87,12 +87,12 @@ input#num1, input#num2{
     background-color: var(--hover-purple);
 }
 
-#output-div{
+#output-container{
     font-family: monospace;
     padding: 1rem;
     background-color: black;
     color: var(--code-text);
-    height: 80px;
+    height: 70px;
     width: 95%;
     max-width: 800px !important;
     font-size: 10px;
@@ -153,13 +153,13 @@ footer{
 /* screens 600px and more */
 @media screen and (min-width: 600px) {
 
-	#script, #output-div, #output-text{
+	#script-container, #output-container, #output-text{
 	   font-size: 14px;
     }
 
-    #script{
+    #script-container{
         font-size: 12px;
-        height: 250px;
+        height: 300px;
     }
 
     #header{
@@ -188,8 +188,8 @@ footer{
         font-size: 15px;
     }
 
-    #output-div{
-        height: 120px;
+    #output-container{
+        height: 100px;
     }
 
     #output-msg{
@@ -203,12 +203,12 @@ footer{
 
 /* screens 1000px and more */
 @media screen and (min-width: 1000px) {
-	#script, #output-div, #output-text{
+	#script-container, #output-container, #output-text{
 	   font-size: 16px;
     }
 
-    #script{
-        height: 300px;
+    #script-container{
+        height: 350px;
     }
 
     #header{
