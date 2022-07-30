@@ -64,13 +64,13 @@ input#num1, input#num2{
     background-color: var(--hover-terquaz);
 }
 
-textarea{
+#script{
     font-size: 10px;
     font-family: monospace;
     background-color: black;
     color: var(--code-text);
     caret-color: var(--code-text);
-    height: 150px;
+    height: 200px;
     width: 95% !important;
     max-width: 800px !important;
     outline: solid thin var(--heavy-terquaz);
@@ -153,13 +153,13 @@ footer{
 /* screens 600px and more */
 @media screen and (min-width: 600px) {
 
-	textarea, #output-div, #output-text{
+	#script, #output-div, #output-text{
 	   font-size: 14px;
     }
 
-    textarea{
+    #script{
         font-size: 12px;
-        height: 220px;
+        height: 250px;
     }
 
     #header{
@@ -203,11 +203,11 @@ footer{
 
 /* screens 1000px and more */
 @media screen and (min-width: 1000px) {
-	textarea, #output-div, #output-text{
+	#script, #output-div, #output-text{
 	   font-size: 16px;
     }
 
-    textarea{
+    #script{
         height: 300px;
     }
 
@@ -221,18 +221,5 @@ footer{
     
     select, option, input#num1, input#num2{
         font-size: 16px;
-    }
-}
-
-
-/* screens 1000px and more */
-@media screen and (min-height: 900px) {
-
-    textarea{
-        height: 300px;
-    }
-
-	#output-div{
-        height: 160px;
     }
 }
