@@ -70,7 +70,7 @@ input#num1, input#num2{
     background-color: black;
     color: var(--code-text);
     caret-color: var(--code-text);
-    height: 250px;
+    height: 200px;
     width: 95% !important;
     max-width: 800px !important;
     outline: solid thin var(--heavy-terquaz);
@@ -159,7 +159,7 @@ footer{
 
     #script-container{
         font-size: 12px;
-        height: 300px;
+        height: 270px;
     }
 
     #header{
@@ -208,7 +208,7 @@ footer{
     }
 
     #script-container{
-        height: 350px;
+        height: 330px;
     }
 
     #header{
